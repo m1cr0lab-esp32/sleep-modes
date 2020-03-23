@@ -17,3 +17,6 @@ aux_links:
     - "https://rntlab.com/forum/"
 
 #footer_content: "Copyright &copy; 2020 Stéphane Calderoni"
+
+# Google Analytics Tracking
+ga_tracking: UA-1998450-3
