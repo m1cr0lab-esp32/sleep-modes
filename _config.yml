@@ -1,0 +1,19 @@
+remote_theme: pmarsceill/just-the-docs
+
+title: Steph's µLab
+
+baseurl: "/esp32-sleep-modes"
+permalink: pretty
+timezone: Indian/Reunion
+search_enabled: false
+heading_anchors: true
+
+exclude: [README.md, LICENSE]
+
+aux_links:
+  "Random Nerd Tutorials":
+    - "https://randomnerdtutorials.com"
+  "RNT Lab Forum":
+    - "https://rntlab.com/forum/"
+
+#footer_content: "Copyright &copy; 2020 Stéphane Calderoni"
