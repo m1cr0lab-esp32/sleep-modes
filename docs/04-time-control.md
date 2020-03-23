@@ -93,7 +93,7 @@ Here we have set a `LOOP_FREQUENCY` of 25 Hz, i.e. the main loop will run 25 tim
 
 Next, we defined a `timer` variable as a `Timer` data type, which is composed of 2 state variables:
 
-- `laptime` to save the time (in milliseconds) when the last cycle start.
+- `laptime` to save the time (in milliseconds) when the current cycle start.
 - `ticks` to count the number of cycles performed since the start of the program.
 
 We must initialize the `timer` variable in the `setup()` function:

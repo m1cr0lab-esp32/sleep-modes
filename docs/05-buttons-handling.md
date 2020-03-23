@@ -41,7 +41,7 @@ Button sleepButton = { GPIO_NUM_2, 0 }; // right button
 ![Button state]({{ site.baseurl }}/images/button-state.png){: width="444" }
 {: .img-center }
 
-An 8-bit integer is used to encode values between 0 and 255 (or 0x00 and 0xff).
+An 8-bit integer is used to encode values between 0 and 255 (between 0x00 and 0xff).
 
 This simple modeling makes it possible to distinguish two instantaneous `pressed` and `released` states, as well as a durable `held` state whose value tells us the number of cycles during which the button has been held down.
 

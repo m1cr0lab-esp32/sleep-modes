@@ -11,7 +11,7 @@ permalink: /light-sleep-mode/
 
 ## Light Sleep Mode
 
-In this mode, digital peripherals, most of the RAM, and CPUs are clock-gated. When light sleep mode exits, peripherals, and CPUs resume operation, their internal state is preserved. Clock gating is a technique to save power consumption in digital circuitry by disabling the clock pulses to flip-flops, which in turn disables the switching states. As switching states consume a lot of power, hence if you disable it, we can save a lot of power.
+In this mode, digital peripherals, most of the RAM, and CPUs are clock-gated. When light sleep mode exits, peripherals and CPUs resume operation, their internal state is preserved. Clock gating is a technique to save power consumption in digital circuitry by disabling the clock pulses to flip-flops, which in turn disables the switching states. As switching states consume a lot of power, hence if you disable it, we can save a lot of power.
 
 ![ESP32 in light sleep mode]({{ site.baseurl }}/images/esp32-light-sleep.png){: width="400" }
 {: .img-caption-center }
@@ -32,7 +32,7 @@ void lightSleep() {
 }
 ```
 
-Well, now we've got everything we need to put the micro-controller to sleep. And we're going to do it with our second button (the one on the right), the `sleepButton`:
+Well, now we've got everything we need to put the microcontroller to sleep. And we're going to do it with our second button (the one on the right), the `sleepButton`:
 
 ```cpp
 // ----------------------------------------------------------------------------

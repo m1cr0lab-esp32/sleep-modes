@@ -31,7 +31,7 @@ In other words, during this period, the microcontroller is unable to perform any
 
 It doesn't help us at all, because we'll need to read the state of the buttons to be able to control the behavior of the microcontroller.
 
-One possibility would be to limit oneself to very short break times, but this is ultimately not acceptable. If you want to make an LED flash slowly, the pause times would be much too long. Another possibility would be to use interruptions, but their use can be tricky, especially for beginners, and is only possible with very short treatments. In this case, reading the status of simple buttons might be fine, but I would like to show you another way of doing it that does not require the use of interruptions and which has the advantage of being more flexible to handle.
+One possibility would be to limit oneself to very short break times, but this is ultimately not acceptable. If you want to make an LED flash slowly, the pause times would be much too long. Another possibility would be to use interruptions, but their use can be tricky, especially for beginners, and is only recommended with very short treatments. In this case, reading the status of simple buttons might be fine, but I would like to show you another way of doing it that does not require the use of interruptions and which has the advantage of being more flexible to handle.
 
 
 ## High Frequency Of The Main Loop
@@ -94,7 +94,7 @@ counter:   22107427 -->   23137380 => frequency:    1029953
 
 As you can see, the cycle frequency is stabilizing at a value well above 1 MHz, which is huge!
 
-A high frequency may indeed be required for some applications. But for today's application, you don't need to have such a high velocity. We will see in the next chapter how to regulate this frequency of execution by adjusting it to our needs. And at the same time, this process will allow us to manage several things at once, without being blocked by the nature of the delay() function.
+A high frequency may indeed be required for some applications. But for today's application, you don't need to have such a high velocity. We will see in the next chapter how to regulate this frequency of execution by adjusting it to our needs. And at the same time, this process will allow us to manage several things at once, without being blocked by the nature of the `delay()` function.
 
 
 [LED Setup]({{ site.baseurl }}/led-setup/){: .btn }

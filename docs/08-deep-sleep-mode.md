@@ -77,7 +77,7 @@ What the hell happened? You don't get the same behavior at all as after a light 
 
 During deep sleep mode, the main CPU is powered down, while the ULP coprocessor remains receptive to the timers or can perform sensor measurements and wakes up the main system when a timer is triggered, or based on the data measured by the sensors. This sleep pattern is known as **ULP sensor-monitored pattern**.
 
-Along with the CPU, the main memory of the chip is also disabled. So, everything stored in that memory is wiped out and cannot be accessed. This is the reason why, after waking up, the active LED is that of index 0 (the red LED), regardless of the `ledIndex` value before going into sleep mode. The current value of `ledIndex`, which is stored in RAM, was not retained after the sleep phase.
+Along with the CPU, the main memory of the chip is also disabled. So, everything stored in that memory is wiped out and cannot be accessed. This is the reason why, after waking up, the active LED is that of index 0 (the red LED), regardless of the `ledIndex` value before going into deep sleep. The current value of `ledIndex`, which is stored in RAM, was not retained after the sleep phase.
 
 However, the **RTC memory** is kept powered on. So, its content is preserved during deep sleep and can be retrieved after we wake the chip up. That’s the reason, for example, the chip stores Wi-Fi and Bluetooth connection data in RTC memory before disabling them. And in the same way, we need to store the `ledIndex` value in the RTC memory to preserve it during deep sleep.
 
@@ -138,7 +138,7 @@ void loop() {
 }
 ```
 
-When the ESP32 wakes up, it reboots and the program execution restarts from the beginning. Therefore, if you wish to make the active LED blink after the reboot, you call the `flashActiveLED()` function within the `setup()` function, making sure that it is only executed when the microcontroller comes out of a deep sleep :
+When the ESP32 wakes up, it reboots and the program execution restarts from the beginning. Therefore, if you wish to make the active LED blink after the reboot, you have to call the `flashActiveLED()` function within the `setup()` function, making sure that it is only executed when the microcontroller comes out of a deep sleep :
 
 ```cpp
 // ----------------------------------------------------------------------------
