@@ -10,10 +10,11 @@
  * You will find below the successive versions of the code that follows the
  * progress of the tutorial through the chapters. Simply uncomment the line
  * corresponding to the code of the chapter you want to experiment with before
- * you start compiling and uploading. Make sure you only uncomment one #include
- * at a time!
+ * you start compiling and uploading.
  * ----------------------------------------------------------------------------
- * The different versions can be found in the src directory:
+ * ☢ Make sure you only uncomment one `#include` at a time! ☢
+ * ----------------------------------------------------------------------------
+ * The different versions can be found in the `src` directory:
  * src
  * ├── 1-led-setup.h
  * ├── 2-timing-problem.h
@@ -32,7 +33,7 @@
 // #include "src/1-led-setup.h"
 
 // ----------------------------------------------------------------------------
-// Setting Up The LED Control
+// Timing Problem | High Frequency Of The Main Loop
 // ----------------------------------------------------------------------------
 
 // #include "src/2-timing-problem.h"
