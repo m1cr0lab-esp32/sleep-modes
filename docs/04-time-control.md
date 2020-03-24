@@ -23,7 +23,6 @@ Let's go back to our initial program which simply animates a ramp of LEDs:
 // ----------------------------------------------------------------------------
 // Definition of LED properties
 // ----------------------------------------------------------------------------
-
 //                                  RED        YELLOW        GREEN
 //                                   0            1            2
 const gpio_num_t LED_PINS[] = { GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_32 };
@@ -183,7 +182,7 @@ void loop() {
 
 In this way, the illumination time of an LED remains independent of the selected frequency.
 
-Well now, all that's left to do is to add the end-of-cycle waiting mechanism. To do this, simply calculate the difference between the current date and the start date of the cycle, and check that it does not exceed the total duration `WAIT_PERIOD` of a cycle.
+Well now, all that's left to do is to add the end-of-cycle waiting mechanism. To do this, simply calculate the difference between the current date and the start date of the cycle, and check that it does not exceed the `WAIT_PERIOD` duration of a cycle.
 
 This calculation is performed in a `do {} while();` waiting loop, after all the tasks to be performed in the cycle have been completed. And when the end of a cycle is reached, the start time of the new cycle is saved and the number of cycles performed is incremented:
 
@@ -233,7 +232,8 @@ To conclude this chapter, here is the complete code of this experiment:
 // ----------------------------------------------------------------------------
 // Definition of LED properties
 // ----------------------------------------------------------------------------
-
+//                                  RED        YELLOW        GREEN
+//                                   0            1            2
 const gpio_num_t LED_PINS[] = { GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_32 };
 const uint8_t    LED_NUMBER = 3;
 

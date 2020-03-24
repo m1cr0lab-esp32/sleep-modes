@@ -68,7 +68,8 @@ Here's the complete code you should have by now:
 // ----------------------------------------------------------------------------
 // Definition of LED properties
 // ----------------------------------------------------------------------------
-
+//                                  RED        YELLOW        GREEN
+//                                   0            1            2
 const gpio_num_t LED_PINS[] = { GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_32 };
 const uint8_t    LED_NUMBER = 3;
 

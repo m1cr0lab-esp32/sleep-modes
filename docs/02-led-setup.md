@@ -19,8 +19,8 @@ Let's start with the 3 LEDs, which are connected to pins GPIO27, GPIO25 and GPIO
 // ----------------------------------------------------------------------------
 // Definition of LED properties
 // ----------------------------------------------------------------------------
-
 //                                  RED        YELLOW        GREEN
+//                                   0            1            2
 const gpio_num_t LED_PINS[] = { GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_32 };
 const uint8_t    LED_NUMBER = 3;
 
@@ -28,7 +28,7 @@ const uint8_t    LED_NUMBER = 3;
 uint8_t ledIndex = 0;
 ```
 
-We simply define a constant array that includes the pins of our LEDs, as well as a `ledIndex` variable that will allow us to browse this array to extract the pin of the LED we want to turn on from its index. The LED that will be lit by default is the red one, i.e. the one whose pin has the index 0 in the table.
+We simply define a constant array that includes the pins of our LEDs, as well as a `ledIndex` variable that will allow us to browse this array to extract the pin of the LED we want to turn on from its index. The LED that will be lit by default is the red one, i.e. the one whose pin has the index 0 in the array.
 
 Let's then initialize the control pins of our LEDs as output pins, and turn on the active LED :
 
@@ -131,8 +131,8 @@ To conclude this chapter, here is the complete code of our first experiment:
 // ----------------------------------------------------------------------------
 // Definition of LED properties
 // ----------------------------------------------------------------------------
-
 //                                  RED        YELLOW        GREEN
+//                                   0            1            2
 const gpio_num_t LED_PINS[] = { GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_32 };
 const uint8_t    LED_NUMBER = 3;
 

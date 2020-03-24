@@ -14,7 +14,7 @@ permalink: /parts-and-wiring/
 To follow this tutorial you need the following parts:
 
 - 1 [ESP32][parts-esp32]
-- 5 [resistors][parts-res] (1 x 120 Ω, 2 x 100 Ω and 2 x 10 kΩ)
+- 5 [resistors][parts-res] (1 x 220 Ω, 2 x 100 Ω and 2 x 10 kΩ)
 - 3 [LEDs][parts-led]  
     I used a red, a yellow and a green one, but you can use the LEDs of your choice. You'll just have to think about adapting the value of the protection resistors that you'll add to them in series.
 - 2 [push buttons][parts-btn]

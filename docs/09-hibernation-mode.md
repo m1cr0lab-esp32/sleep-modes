@@ -9,7 +9,7 @@ permalink: /hibernation-mode/
 {% include header.md %}
 
 
-## Hibernation
+## Hibernation Mode
 
 Unlike deep sleep mode, in hibernation mode the chip disables internal 8-MHz oscillator and ULP-coprocessor as well. The RTC recovery memory is also powered down, meaning there’s no way we can preserve any data during hibernation mode.
 
@@ -97,7 +97,8 @@ Then change the `hibernate()` function to save `ledIndex` value in the EEPROM be
 
 ```cpp
 void hibernate() {
-    // the ledIndex value is saved at address 0x0000
+    // In hibernation mode, the only way to save data is to host it in the EEPROM.
+    // The ledIndex value is saved at address 0x0000.
     EEPROM.write(0, ledIndex);
     EEPROM.commit();
 
@@ -139,8 +140,9 @@ void setup() {
     // sets the EEPROM desired size
     EEPROM.begin(1); // <-- we only need 1 byte to save ledIndex value
 
-    // flash the active LED only after a deep sleep
+    // flash the active LED only after a deep sleep or hibernation
     if (esp_sleep_get_wakeup_cause() == ESP_SLEEP_WAKEUP_TIMER) {
+        // in hibernation mode, the only way to save data is to host it in the EEPROM
         ledIndex = EEPROM.read(0); // <-- the value stored at address 0x0000 is assigned to ledIndex
         flashActiveLED();
     }
@@ -166,7 +168,8 @@ To conclude this chapter, here is the complete code of this experiment:
 // ----------------------------------------------------------------------------
 // Definition of LED properties
 // ----------------------------------------------------------------------------
-
+//                                  RED        YELLOW        GREEN
+//                                   0            1            2
 const gpio_num_t LED_PINS[] = { GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_32 };
 const uint8_t    LED_NUMBER = 3;
 
@@ -237,9 +240,10 @@ void setup() {
     // we only need 1 byte to save ledIndex value
     EEPROM.begin(1);
 
-    // flash the active LED only after a deep sleep
+    // flash the active LED only after a deep sleep or hibernation
     if (esp_sleep_get_wakeup_cause() == ESP_SLEEP_WAKEUP_TIMER) {
-        // the value stored at address 0x0000 is assigned to ledIndex
+        // In hibernation mode, the only way to save data is to host it in the EEPROM.
+        // The value stored at address 0x0000 is assigned to ledIndex.
         ledIndex = EEPROM.read(0);
         flashActiveLED();
     }
@@ -304,7 +308,8 @@ void deepSleep() {
 }
 
 void hibernate() {
-    // the ledIndex value is saved at address 0x0000
+    // In hibernation mode, the only way to save data is to host it in the EEPROM.
+    // The ledIndex value is saved at address 0x0000.
     EEPROM.write(0, ledIndex);
     EEPROM.commit();
 

@@ -195,7 +195,8 @@ At this point, your code should conform to this:
 // ----------------------------------------------------------------------------
 // Definition of LED properties
 // ----------------------------------------------------------------------------
-
+//                                  RED        YELLOW        GREEN
+//                                   0            1            2
 const gpio_num_t LED_PINS[] = { GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_32 };
 const uint8_t    LED_NUMBER = 3;
 
@@ -406,7 +407,7 @@ void RTC_IRAM_ATTR esp_wake_deep_sleep() {
 
 Indeed, this routine will work because the `ledIndex` variable is actually hosted in the RTC memory.
 
-If you wanted to define your own wake stub, it is also possible to do this by calling the `esp_set_deep_sleep_wake_stub()` function by passing a reference to your custom function as an argument:
+If you wanted to define your own wake stub, it is also possible to do this by calling the `esp_set_deep_sleep_wake_stub()` function, and by passing a reference to your custom function as an argument:
 
 ```cpp
 void RTC_IRAM_ATTR wake_stub() {

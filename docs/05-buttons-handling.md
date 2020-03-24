@@ -108,7 +108,7 @@ bool held(Button *b) {
 }
 ```
 
-You'll notice that these 3 new functions wait for a parameter which is a pointer to a `Button` (designated by the `*` operator). In other words, when calling these functions, the `Button` instances will have to be passed by **reference**. Indeed, by default, the arguments of a function are passed by **value**, i.e. by making a copy of these objects. So within the function's body, any modification made on one of these copies will have no impact on the original object. By passing arguments by reference, the function has access (through the pointer) to the original object. So any changes made to this object will be retained after the function has finished executing.
+You'll notice that these 3 new functions wait for a parameter which is a pointer to a `Button` (designated by the `*` operator). In other words, when calling these functions, the `Button` instances will have to be passed by **reference**. Indeed, by default, the arguments of a function are passed by **value**, i.e. by making a copy of these objects. So within the function's body, any modification made on these copies will have no impact on the original objects. By passing arguments by reference, the function has access (through the pointer) to the original object. So any changes made to this object will be retained after the function has finished executing.
 
 
 ### Using The Event Manager
@@ -197,7 +197,8 @@ To conclude this chapter, here is the complete code of this experiment:
 // ----------------------------------------------------------------------------
 // Definition of LED properties
 // ----------------------------------------------------------------------------
-
+//                                  RED        YELLOW        GREEN
+//                                   0            1            2
 const gpio_num_t LED_PINS[] = { GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_32 };
 const uint8_t    LED_NUMBER = 3;
 
