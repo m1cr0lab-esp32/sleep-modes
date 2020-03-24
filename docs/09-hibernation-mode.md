@@ -18,7 +18,7 @@ Everything else is shut off except only one RTC timer on the slow clock and some
 This reduces power consumption even further.
 
 ![ESP32 in hibernation mode]({{ site.baseurl }}/images/esp32-hibernation.png){: width="400" }
-{: .img-caption-center }
+{: .img-center .with-caption .no-bottom-margin }
 
 Hibernation Mode
 {: .caption }
@@ -69,11 +69,12 @@ void loop() {
 
 Compile and upload the code and let's see what happens:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-hibernation-nothing.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-hibernation-nothing.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 Once the 4-second sleep timeout period has elapsed, no LEDs light up and it looks like the ESP32 still hasn't woken up. Actually, there's about a 1.2% chance that an LED will light up... But why is that?
 
@@ -83,7 +84,8 @@ For this reason, there is a good chance that no LEDs will light up when the micr
 
 If you don't know how to use the EEPROM, I recommend you take a look at the following tutorial:
 
-[ESP32 Flash Memory – Store Permanent Data (Write and Read)][rnt-eeprom]
+[ESP32 Flash Memory – Store Permanent Data][rnt-eeprom]  
+*(on Random Nerd Tutorials)*{: .text-grey }
 
 Now, at the very beginning of the program, add the following line:
 
@@ -147,11 +149,12 @@ void setup() {
 
 Now test your program again. You should find that this time everything works correctly:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-hibernation-flashing.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-hibernation-flashing.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 ## The Resulting Code
 

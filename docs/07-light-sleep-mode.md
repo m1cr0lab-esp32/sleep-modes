@@ -14,7 +14,7 @@ permalink: /light-sleep-mode/
 In this mode, digital peripherals, most of the RAM, and CPUs are clock-gated. When light sleep mode exits, peripherals and CPUs resume operation, their internal state is preserved. Clock gating is a technique to save power consumption in digital circuitry by disabling the clock pulses to flip-flops, which in turn disables the switching states. As switching states consume a lot of power, hence if you disable it, we can save a lot of power.
 
 ![ESP32 in light sleep mode]({{ site.baseurl }}/images/esp32-light-sleep.png){: width="400" }
-{: .img-caption-center }
+{: .img-center .with-caption .no-bottom-margin }
 
 Light Sleep Mode
 {: .caption }
@@ -60,10 +60,12 @@ You can see that we need to add to the loop the routine that reads the state of 
 
 All right, let's see how it goes. Compile and upload the program to your board... you should get this:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-light-sleep.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-light-sleep.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 Everything's working perfectly. The LEDs go out when the ESP32 enters the sleep phase. The small red LED on the board does not go out because it is not directly connected to the microcontroller circuit. It is simply a power LED.
 
@@ -90,8 +92,12 @@ void flashActiveLED() {
 }
 ```
 
-I see you coming... *"ROFL, he used a delay!"* <i class="far fa-grin-squint-tears" style="color:#a00;"></i>
-{: .center }
+I see you coming...  
+*"ROFL, he used a delay!"*{: style="color:#a00;" }
+{: .caption style="margin-bottom:.5em;" }
+
+<i class="far fa-grin-squint-tears" style="color:#a00;"></i>
+{: .caption style="font-size:1.5em;line-height:1em;" }
 
 I didn't say it was forbidden to use the `delay()` function... just that it was better to avoid it when you want to be able to run several tasks simultaneously. But in this case, its use is entirely appropriate. Indeed, when the ESP32 wakes up, you want to make the LED blink, without anything to interrupt this behaviour. Once the flashing is completed, the program resumes its normal course.
 
@@ -118,10 +124,12 @@ void loop() {
 
 Compile and upload this new program and let's see what happens:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-light-sleep-flashing.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-light-sleep-flashing.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 Perfect! It's exactly what we expected! But if you take a closer look, you need to understand something essential that is unique to the light sleep mode.
 

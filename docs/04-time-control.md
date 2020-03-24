@@ -25,6 +25,7 @@ Let's go back to our initial program which simply animates a ramp of LEDs:
 // ----------------------------------------------------------------------------
 
 //                                  RED        YELLOW        GREEN
+//                                   0            1            2
 const gpio_num_t LED_PINS[] = { GPIO_NUM_27, GPIO_NUM_25, GPIO_NUM_32 };
 const uint8_t    LED_NUMBER = 3;
 
@@ -214,10 +215,12 @@ void loop() {
 
 That's it! It's finally not very complicated, and now we are able to totally control the execution frequency of the main loop cycles. Now, if we look at what we get for this second experiment:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-leds.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-leds.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 The circuit behaves exactly as in the previous experiment, regardless of the frequency. But the important thing to remember here is that no matter how long an LED lights up, we are able to perform other tasks simultaneously. The microcontroller does not get stuck by a `delay()`.
 

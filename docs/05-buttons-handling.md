@@ -151,10 +151,12 @@ You also notice that `shiftButton` is indeed passed by reference, using the `&` 
 
 You can now compile and upload the program to ESP32. And you should get this:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-button-held.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-button-held.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 We could also make it so that we only go to the next LED each time the button is pressed. This is by the way what we'll keep as behavior for the rest of the tutorial. Here is how to proceed:
 
@@ -177,10 +179,12 @@ void loop() {
 
 This time we get the following result:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-button-pressed.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-button-pressed.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 We'll use the `realeased()` function in the next chapter, when it comes time to act on the second button.
 

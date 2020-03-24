@@ -14,7 +14,7 @@ permalink: /sleep-modes/
 [Espressif's documentation][esp32-datasheet] details all the modules that make up the ESP32. All these modules are functional when the microcontroller is in **active mode**:
 
 ![ESP32 in active mode]({{ site.baseurl }}/images/esp32-active.png){: width="400" }
-{: .img-caption-center }
+{: .img-center .with-caption .no-bottom-margin }
 
 Active Mode
 {: .caption }
@@ -22,7 +22,7 @@ Active Mode
 However, there is the possibility of operating the ESP32 in degraded mode by deactivating some of its modules, and thus making it consume less energy. **Modem sleep** mode, for example, disables all circuits responsible for the operation of the WiFi, Bluetooth and radio modules:
 
 ![ESP32 in modem sleep mode]({{ site.baseurl }}/images/esp32-modem-sleep.png){: width="400" }
-{: .img-caption-center }
+{: .img-center .with-caption .no-bottom-margin }
 
 Modem Sleep Mode
 {: .caption }

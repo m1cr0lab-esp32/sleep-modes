@@ -82,11 +82,13 @@ void loop() {
 Let's observe what happens as we execute our code:
 
 ![Demo]({{ site.baseurl }}/images/demo-fastleds.jpg){: width="340" .shadow }
-{: .img-caption-center }
+{: .img-center .with-caption }
 
-<i class="far fa-surprise" style="color:#fa0;"></i> <i class="far fa-flushed" style="color:#a00;"></i>  
+<i class="far fa-surprise" style="color:#fa0;"></i> <i class="far fa-flushed" style="color:#a00;"></i>
+{: .caption style="margin-bottom:.5em;font-size:1.5em;line-height:1em;" }
+
 All LEDs light up at the same time...
-{: .center }
+{: .caption }
 
 But how come? We made sure to scan each LED one by one!
 
@@ -111,14 +113,15 @@ void loop() {
 
 And this time, it's clear that the scan is proceeding normally:
 
-<video class="img-caption-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-leds.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div class="video-wrapper with-caption">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-leds.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 <i class="far fa-smile" style="color:#0a6;"></i>
-{: .center }
-
+{: .caption style="font-size:1.5em;" }
 
 ## The Resulting Code
 

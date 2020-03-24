@@ -14,7 +14,7 @@ permalink: /deep-sleep-mode/
 Deep sleep mode of ESP32 is very efficient and consumes very less power when powered from battery sources. In this mode, the CPU, most of the RAM and all the digital peripherals are powered off. The only parts of the chip that remains powered on are: RTC controller, RTC peripherals (including ULP co-processor), and RTC memories (slow and fast).
 
 ![ESP32 in deep sleep mode]({{ site.baseurl }}/images/esp32-deep-sleep.png){: width="400" }
-{: .img-caption-center }
+{: .img-center .with-caption .no-bottom-margin }
 
 Deep Sleep Mode
 {: .caption }
@@ -64,10 +64,12 @@ void loop() {
 
 Compile, upload the new program and see what happens:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-deep-sleep.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-deep-sleep.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 - When the ESP32 wakes up, the active LED is always the first LED of the ramp.
 - The active LED stops flashing immediately after waking up.
@@ -102,10 +104,12 @@ RTC_DATA_ATTR uint8_t ledIndex = 0;
 
 Now, again, compile, upload the new program and see what happens:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-deep-sleep-rtc.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-deep-sleep-rtc.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 Okay, that's much better. However, when the chip wakes up, the active LED still doesn't blink.
 <i class="far fa-meh"></i>
@@ -175,10 +179,12 @@ Note that it is necessary here to make a forward declaration of the `flashActive
 
 Compile and upload this new version of the program, and this time you can see that we are getting the desired behavior:
 
-<video class="img-center shadow" width="340" height="255" autoplay muted loop>
-  <source src="{{ site. baseurl }}/videos/demo-deep-sleep-flashing.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<div class="video-wrapper">
+    <video class="video shadow" autoplay muted loop>
+    <source src="{{ site. baseurl }}/videos/demo-deep-sleep-flashing.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+</div>
 
 
 ## The Resulting Code
