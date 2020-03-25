@@ -24,5 +24,5 @@ I look forward to hearing from you...
 You'll find my full code available on [GitHub][github].
 
 
-[discussion]: https://rntlab.com/question/
+[discussion]: https://rntlab.com/question/%f0%9f%8e%93-new-tutorial-experimenting-with-esp32-sleep-modes/
 [github]:     https://github.com/iw4rr10r/esp32-sleep-modes

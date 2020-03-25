@@ -56,7 +56,7 @@ To fully understand what we're doing here, I suggest you take a look at the foll
 [origin]:     https://rntlab.com/question/how-to-use-esp32-light-sleep/
 [rnt]:        https://randomnerdtutorials.com/
 [rntlab]:     https://rntlab.com/forum/
-[discussion]: https://rntlab.com/question/
+[discussion]: https://rntlab.com/question/%f0%9f%8e%93-new-tutorial-experimenting-with-esp32-sleep-modes/
 [rnt-wakeup]: https://randomnerdtutorials.com/esp32-timer-wake-up-deep-sleep/
 [esp32-sm]:   https://docs.espressif.com/projects/esp-idf/en/latest/api-reference/system/sleep_modes.html
 [esp32-ds]:   https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf
