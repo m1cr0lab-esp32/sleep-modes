@@ -3,7 +3,7 @@ remote_theme: pmarsceill/just-the-docs
 title: Steph's µLab
 description: This tutorial presents a comparative analysis of the advanced sleep modes of ESP32. You are guided step by step through different experiments by programming the microcontroller with C++.
 
-baseurl: "/esp32-sleep-modes"
+baseurl: "/sleep-modes"
 permalink: pretty
 timezone: Indian/Reunion
 search_enabled: false
