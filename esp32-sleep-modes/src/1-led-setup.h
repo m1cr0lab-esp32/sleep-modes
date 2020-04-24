@@ -3,7 +3,7 @@
  * Experimenting with ESP32 sleep modes
  * ----------------------------------------------------------------------------
  * Please visit the tutorial:
- * @see https://iw4rr10r.github.io/esp32-sleep-modes/
+ * @see https://m1cr0lab-esp32.github.io/sleep-modes/
  * ----------------------------------------------------------------------------
  * © 2020 Stéphane Calderoni
  * ----------------------------------------------------------------------------
